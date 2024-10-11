@@ -15,16 +15,16 @@ export default function Index() {
       quality: 1,
     });
     if (!result.canceled) {
-      console.log(result);
+      setSelectedImage(result?.assets?.[0]?.uri || null);
     } else {
-      console.log('User cancelled image picker');
+      alert('You cancelled the image picker.');
     }
   };
 
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
-        <ImageViewer imgSource={PlaceholderImage} />
+        <ImageViewer imgSource={selectedImage || PlaceholderImage} />
       </View>
       <View style={styles.footerContainer}>
         <Button
