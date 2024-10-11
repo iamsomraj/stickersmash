@@ -17,6 +17,8 @@ export default function EmojiSticker({ imageSize, stickerSource }: Props) {
     .onStart(() => {
       if (scaleImage.value !== imageSize * 2) {
         scaleImage.value = scaleImage.value * 2;
+      } else {
+        scaleImage.value = imageSize;
       }
     });
 
