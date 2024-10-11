@@ -4,8 +4,9 @@ import { StyleSheet, View } from 'react-native';
 
 import Button from '@/components/button';
 import CircleButton from '@/components/circle-button';
-import EmojiPicker from '@/components/emoji-picker';
 import EmojiList from '@/components/emoji-list';
+import EmojiPicker from '@/components/emoji-picker';
+import EmojiSticker from '@/components/emoji-sticker';
 import IconButton from '@/components/icon-button';
 import ImageViewer from '@/components/image-viewer';
 
@@ -44,12 +45,20 @@ export default function Index() {
     setIsModalVisible(false);
   };
 
-  const onSaveImageAsync = async () => {};
+  const onSaveImageAsync = async () => {
+    // we will implement this later
+  };
 
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
         <ImageViewer imgSource={selectedImage || PlaceholderImage} />
+        {pickedEmoji && (
+          <EmojiSticker
+            imageSize={40}
+            stickerSource={pickedEmoji}
+          />
+        )}
       </View>
       {showAppOptions ? (
         <View style={styles.optionsContainer}>
