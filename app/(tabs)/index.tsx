@@ -46,6 +46,7 @@ export default function Index() {
 
   const onReset = () => {
     setShowAppOptions(false);
+    setSelectedImage(undefined);
   };
 
   const onAddSticker = () => {
