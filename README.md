@@ -1,5 +1,7 @@
 # Stickersmash - A Universal Sticker Application
 
+![Hero Image](./image.png)
+
 Stickersmash is a universal application that allows users to create and save stickers. Built using Expo, it offers a seamless experience across various devices.
 
 ## Run Locally
